@@ -13,18 +13,6 @@ RGB-X multimodal remote sensing segmentation improves scene parsing with auxilia
 - **Lightweight stage fusion**: the two streams are merged at each stage boundary by a zero-initialized confidence-gated additive fusion (LSGF, ~0.15M parameters in total).
 - **SARD (Scene-Aware Reorganization Decoder)**: designed for remote sensing scenes and the asymmetric fused representation. It consists of **SGCR (Scene-Guided Channel Reassembly)**, which reorganizes the deepest semantics via scene-conditioned low-rank channel-group mixing, and **CMKP (Cascaded Multi-Kernel Perception)**, which progressively propagates deep semantics to shallow stages through parallel depthwise convolutions with different receptive fields.
 
-## Results
-
-AXIA achieves state-of-the-art mIoU on four RGB-X benchmarks with only 19.4M trainable parameters:
-
-| Dataset | Modality | Classes | mIoU (%) | mAcc (%) |
-| --- | --- | --- | --- | --- |
-| PIE-RGB-SAR (cloud-free) | RGB-SAR | 6 | **80.2** | **87.6** |
-| PIE-RGB-SAR (cloudy) | RGB-SAR | 6 | **78.3** | **86.7** |
-| YESeg-OPT-SAR | RGB-SAR | 8 | **65.0** | **74.0** |
-| ISPRS Potsdam | RGB-DSM | 6 (5 evaluated) | **86.2** | **92.9** |
-| CART | RGB-T | 10 | **76.8** | 84.2 |
-
 ## Installation
 
 ```bash
